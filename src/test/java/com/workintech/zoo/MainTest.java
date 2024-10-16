@@ -24,7 +24,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @AutoConfigureMockMvc
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-@ExtendWith(ResultAnalyzer.class)
+@ExtendWith(com.workintech.s17d2.ResultAnalyzer.class)
 class MainTest {
 
 
@@ -43,6 +43,7 @@ class MainTest {
 
     @BeforeEach
     void setup() {
+
 
         kangaroo = new Kangaroo(1, "Kenny", 2.0, 85.0, "Male", false);
         koala = new Koala(1, "Kara", 20.0, 15.0, "Female");
