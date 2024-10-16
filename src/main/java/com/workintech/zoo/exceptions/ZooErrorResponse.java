@@ -15,11 +15,8 @@ public class ZooErrorResponse {
 
 
     public ZooErrorResponse(HttpStatus httpStatus, String message, long timestamp) {
-    }
-
-    public ZooErrorResponse(String message, int status, long timestamp) {
+        this.status = httpStatus.value();
         this.message = message;
-        this.status = status;
         this.timestamp = timestamp;
     }
 }
